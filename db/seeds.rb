@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Author.create(first_name: 'Homer', last_name: 'Simpson', year: 1988)
+Author.create(first_name: 'Lisa', last_name: 'Simpson', year: 1989)
+Author.create(first_name: 'Bart', last_name: 'Simpson', year: 1987)
+Author.create(first_name: 'Ned', last_name: 'Flanders', year: 1985)

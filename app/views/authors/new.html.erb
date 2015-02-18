@@ -1,0 +1,24 @@
+<h1> Create new author </h1>
+
+<%= form_for @author do |f| %>
+
+<p>
+	<%= f.label :first_name %><br>
+	<%= f.text_field :first_name %>
+</p>
+
+<p>
+	<%= f.label :last_name %><br>
+	<%= f.text_field :last_name %>
+</p>
+
+<p>
+	<%= f.label :year %><br>
+	<%= f.text_field :year %>
+</p>
+
+<p>
+	<%= f.submit "Add an author" %>
+</p>
+
+<% end %>
