@@ -2,9 +2,17 @@
 <h1>Author</h1>
 
 <ul>
-	<li>First Name: <%= @author.first_name %></li>
-	<li>Last Name: <%= @author.last_name %></li>
-	<li>Year: <%= @author.year %></li>
+	<li> First Name: <%= @author.first_name %> </li>
+	<li> Last Name: <%= @author.last_name %> </li>
+	<li> Year: <%= @author.year %></li>
+	<li> Birthplace: <%= @author.profile.birthplace %> </li>
+	<li> Books:
+		<ul>
+			<% @author.books.each do |book| %>
+				<li> <%= book.title %> (<%= book.year %>) </li>
+			<% end %>
+		</ul>
+	</li>
 </ul>
 
 <p1>

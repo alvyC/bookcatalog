@@ -11,5 +11,14 @@
 #
 
 class Author < ActiveRecord::Base
-	validates :first_name, presence:true, length: {maximum: 50}
+	# has_one :author_profile
+	#
+	# We can use the above syntax or the following; the following can be used to have customized relationship
+	has_one :profile, # Name of methods (rolename in class diagram)
+    		 class_name: "AuthorProfile", # Name of "had" class
+    		 foreign_key: "author_id" # Name of foreign key column
+
+    has_many :books
+
+	validates :first_name, presence:true, length: { maximum: 50 }
 end
